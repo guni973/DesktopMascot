@@ -63,8 +63,11 @@ namespace DesktopMascot
                 jobj.ToString()
                 );
 
-            string todayWeather = (string)((jobj["forecasts"][0]["telop"] as JValue).Value);
-            return "現在の東京の天気は" + todayWeather + "です。";
+            string Weather = (string)((jobj["forecasts"][0]["telop"] as JValue).Value);
+            string dateLabel = (string)((jobj["forecasts"][0]["dateLabel"] as JValue).Value);
+            string location = (string)((jobj["location"]["pref"] as JValue).Value);
+
+            return $"{dateLabel}の{location}の天気は{Weather}です。";
         }
 
     }
