@@ -6,6 +6,8 @@
         xmlns:local="clr-namespace:DesktopMascot"
         mc:Ignorable="d"
         Title="InformationWindow" Height="300" Width="300"
+        AllowsTransparency="True"
+        Background="Transparent"
         WindowStyle="None">
     <Grid>
         <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="294" Margin="0,0,-0.4,-0.4" VerticalAlignment="Top" Width="294">
