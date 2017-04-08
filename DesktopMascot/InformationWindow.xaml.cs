@@ -23,5 +23,15 @@ namespace DesktopMascot
         {
             InitializeComponent();
         }
+
+        public void DisplayMessage(string message)
+        {
+            Dispatcher.Invoke(() => this.serihu.Text = message);
+        }
+
+        public void ClearMessage()
+        {
+            DisplayMessage(string.Empty);
+        }
     }
 }

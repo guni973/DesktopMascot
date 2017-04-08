@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="InformationWindow" Height="300" Width="300">
     <Grid>
-        
+        <TextBlock x:Name="serihu"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"/>
     </Grid>
 </Window>

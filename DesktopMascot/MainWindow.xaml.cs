@@ -17,8 +17,8 @@ using System.Windows.Shapes;
 // getWeather
 using System.Net;
 using Newtonsoft.Json.Linq;
-
-
+using System.ComponentModel;
+using System.Windows.Threading;
 
 namespace DesktopMascot
 {
@@ -30,6 +30,40 @@ namespace DesktopMascot
         public MainWindow()
         {
             InitializeComponent();
+
+            informationWindow = new InformationWindow();
+            informationWindow.Show();
+
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(5.0);
+            timer.Tick += timer_Tick;
+            timer.Start();
+        }
+
+        DispatcherTimer timer;
+        InformationWindow informationWindow;
+
+        int count = 0;
+        void timer_Tick(object sender, EventArgs e)
+        {
+            count++;
+            if (count == 1)
+            {
+                informationWindow.DisplayMessage("ゆっくりしていってね！");
+            }
+            else
+            {
+                count = 0;
+                informationWindow.DisplayMessage("ゆっくりした結果がこれだよ！");
+            }
+        }
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            base.OnClosing(e);
+            if (informationWindow != null)
+            {
+                informationWindow.Close();
+            }
         }
 
         private void Quit_Clicked(object sender, RoutedEventArgs e)
