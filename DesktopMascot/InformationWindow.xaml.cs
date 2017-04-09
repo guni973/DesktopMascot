@@ -26,12 +26,17 @@ namespace DesktopMascot
 
         public void DisplayMessage(string message)
         {
-            Dispatcher.Invoke(() => this.serihu.Text = message);
+            Dispatcher.Invoke(() => this.murmur.Text = message);
         }
 
         public void ClearMessage()
         {
             DisplayMessage(string.Empty);
+        }
+
+        public void DisplayWeather(string weather)
+        {
+            Dispatcher.Invoke(() => this.weather.Text = weather);
         }
 
         protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)

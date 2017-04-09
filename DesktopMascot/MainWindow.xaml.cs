@@ -57,6 +57,12 @@ namespace DesktopMascot
                 informationWindow.DisplayMessage("ゆっくりした結果がこれだよ！");
             }
         }
+
+        void WeatherInformation()
+        {
+            informationWindow.DisplayWeather(getLivedoorWeather());
+        }
+
         protected override void OnClosing(CancelEventArgs e)
         {
             base.OnClosing(e);
