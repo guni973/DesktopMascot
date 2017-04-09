@@ -13,12 +13,12 @@
         <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="294" Margin="0,0,-0.4,-0.4" VerticalAlignment="Top" Width="294">
             <TabItem Header="メッセージ">
                 <Grid Background="#FFE5E5E5">
-                    <TextBlock x:Name="serihu" HorizontalAlignment="Left" Margin="0,0,-0.2,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="266" Width="289"/>
+                    <TextBlock x:Name="murmur" HorizontalAlignment="Left" Margin="0,0,-0.2,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="266" Width="289" FontSize="18.667"/>
                 </Grid>
             </TabItem>
             <TabItem Header="天気">
                 <Grid Background="#FFE5E5E5">
-                    <TextBlock x:Name="weather" HorizontalAlignment="Left" Margin="0,0,-0.2,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="266" Width="289"/>
+                    <TextBlock x:Name="weather" HorizontalAlignment="Left" Margin="0,0,-0.2,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="266" Width="289" FontSize="18.667"/>
                 </Grid>
             </TabItem>
         </TabControl>

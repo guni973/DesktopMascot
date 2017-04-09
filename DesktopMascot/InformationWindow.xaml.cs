@@ -26,7 +26,7 @@ namespace DesktopMascot
 
         public void DisplayMessage(string message)
         {
-            Dispatcher.Invoke(() => this.serihu.Text = message);
+            Dispatcher.Invoke(() => this.murmur.Text = message);
         }
 
         public void ClearMessage()
