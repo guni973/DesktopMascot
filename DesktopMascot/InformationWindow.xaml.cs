@@ -33,5 +33,11 @@ namespace DesktopMascot
         {
             DisplayMessage(string.Empty);
         }
+
+        protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
+        {
+            base.OnMouseLeftButtonDown(e);
+            DragMove();
+        }
     }
 }
