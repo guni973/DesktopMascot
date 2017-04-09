@@ -34,6 +34,7 @@ namespace DesktopMascot
             informationWindow = new InformationWindow();
             informationWindow.Show();
 
+
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(5.0);
             timer.Tick += timer_Tick;
@@ -103,11 +104,11 @@ namespace DesktopMascot
                 jobj.ToString()
                 );
 
-            string Weather = (string)((jobj["forecasts"][0]["telop"] as JValue).Value);
-            string dateLabel = (string)((jobj["forecasts"][0]["dateLabel"] as JValue).Value);
-            string location = (string)((jobj["location"]["pref"] as JValue).Value);
+            string weather = (string)((jobj["forecasts"][0]["telop"] as JValue).Value);
+            string date = (string)((jobj["forecasts"][0]["date"] as JValue).Value);
+            string title = (string)((jobj["title"] as JValue).Value);
 
-            return $"{dateLabel}の{location}の天気は{Weather}です。";
+            return $"{date}の{title}の天気は{weather}です。";
         }
 
     }
