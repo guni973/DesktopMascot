@@ -34,6 +34,11 @@ namespace DesktopMascot
             DisplayMessage(string.Empty);
         }
 
+        public void DisplayWeather(string weather)
+        {
+            Dispatcher.Invoke(() => this.weather.Text = weather);
+        }
+
         protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
         {
             base.OnMouseLeftButtonDown(e);
